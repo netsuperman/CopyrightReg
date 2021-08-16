@@ -1,0 +1,162 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CombineImage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:be="clr-namespace:BalaReva.EasyImage;assembly=BalaReva.EasyImage" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EntrustFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="InitImageQuality" Type="InArgument(x:Int32)" />
+    <x:Property Name="CombineFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="TempFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="IntroFilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1229,3007</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CombineImage_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>BalaReva.EasyImage</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>BalaReva.EasyImage</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CombineImage" sap:VirtualizedContainerService.HintSize="972,2842" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="temp_file_size" />
+      <Variable x:TypeArguments="si:FileInfo" Name="temp_file" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="930,2750" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="is_jpg" />
+        <Variable x:TypeArguments="x:Int32" Name="temp_file_width" />
+        <Variable x:TypeArguments="x:Int32" Name="temp_file_height" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <be:ImageSizes ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Image Size" sap:VirtualizedContainerService.HintSize="888,87" sap2010:WorkflowViewState.IdRef="ImageSizes_2" ImageHeight="[temp_file_height]" ImagePath="[EntrustFilePath]" ImageWidth="[temp_file_width]" />
+      <If Condition="[temp_file_width &lt;&gt; 1024]" sap:VirtualizedContainerService.HintSize="888,752" sap2010:WorkflowViewState.IdRef="If_6">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="426,568" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,95" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;代理委托书调整分辨率&quot;]" />
+            <be:ImageResize ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DesImagePath="[TempFilePath]" DisplayName="Image Resize" sap:VirtualizedContainerService.HintSize="384,138" sap2010:WorkflowViewState.IdRef="ImageResize_3" ImageHeight="[CInt(1024 / temp_file_width * temp_file_height)]" ImagePath="[EntrustFilePath]" ImageWidth="1024" />
+            <ui:MoveFile ContinueOnError="{x:Null}" Destination="[EntrustFilePath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,163" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True" Path="[TempFilePath]" />
+          </Sequence>
+        </If.Then>
+      </If>
+      <If Condition="[Not (EntrustFilePath.Split(&quot;.&quot;c)(1) = &quot;jpg&quot; Or EntrustFilePath.Split(&quot;.&quot;c)(1) = &quot;jpeg&quot;)]" sap:VirtualizedContainerService.HintSize="888,752" sap2010:WorkflowViewState.IdRef="If_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="426,568" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,95" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;代理委托书转JPG格式&quot;]" />
+            <be:ImageConverter ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DesImagePath="[TempFilePath]" DisplayName="Image Converter" FileFormat="JPEG" sap:VirtualizedContainerService.HintSize="384,138" sap2010:WorkflowViewState.IdRef="ImageConverter_2" ImagePath="[EntrustFilePath]" />
+            <ui:MoveFile ContinueOnError="{x:Null}" Destination="[EntrustFilePath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,163" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="[TempFilePath]" />
+          </Sequence>
+        </If.Then>
+      </If>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="888,95" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;代理委托书合并&quot;]" />
+      <be:ImageCombine ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DesImagePath="[TempFilePath]" DisplayName="Image Combine" sap:VirtualizedContainerService.HintSize="888,22" sap2010:WorkflowViewState.IdRef="ImageCombine_3" ImagePath1="[EntrustFilePath]" ImagePath2="[IntroFilePath]" />
+      <Assign sap:VirtualizedContainerService.HintSize="888,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="si:FileInfo">[temp_file]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="si:FileInfo">[new system.IO.FileInfo(TempFilePath)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If Condition="[temp_file.SizeInKB &gt; 900]" sap:VirtualizedContainerService.HintSize="888,528" sap2010:WorkflowViewState.IdRef="If_8">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="409,365" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="367,95" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;代理委托书压缩体积&quot;]" />
+            <be:ImageCompression ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DesImagePath="[CombineFilePath]" DisplayName="Image Compression" sap:VirtualizedContainerService.HintSize="367,138" sap2010:WorkflowViewState.IdRef="ImageCompression_5" ImagePath="[TempFilePath]" ImageQuality="[InitImageQuality]" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[CombineFilePath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,163" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[TempFilePath]" />
+        </If.Else>
+      </If>
+      <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="888,81" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[TempFilePath]" />
+    </Sequence>
+  </Sequence>
+</Activity>
