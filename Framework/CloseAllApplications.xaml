@@ -62,7 +62,7 @@
     <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;开始关闭Chrome&quot;]" />
     <ui:CloseApplication DisplayName="Close Application 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
       <ui:CloseApplication.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93b6974f-1b4a-4c44-a2b8-8d69d4c2bd96" InformativeScreenshot="d633900b8f71cc7ba41c75571e1f20fd" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_*' title='IAQG OASIS *' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93b6974f-1b4a-4c44-a2b8-8d69d4c2bd96" InformativeScreenshot="8620a4079a9b039881e4654e24279bf9" Selector="&lt;wnd app='chrome.exe' omit:cls='Chrome_WidgetWin_1' title='福建省作品自愿登记系统 - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

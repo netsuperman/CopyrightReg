@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1285,3980</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1285,4042</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>文本3_作者信息_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -74,10 +74,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="作者信息" sap:VirtualizedContainerService.HintSize="1295,3815" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="作者信息" sap:VirtualizedContainerService.HintSize="1295,3877" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -114,27 +113,27 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <If Condition="[item(&quot;权利归属方式&quot;).ToString = &quot;个人作品&quot;]" sap:VirtualizedContainerService.HintSize="1253,3276" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[item(&quot;权利归属方式&quot;).ToString = &quot;个人作品&quot;]" sap:VirtualizedContainerService.HintSize="1253,3338" sap2010:WorkflowViewState.IdRef="If_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="604,3113" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="604,3175" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="用著作权人信息作为作者信息" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,3021" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[item(&quot;著作权人信息&quot;)]">
+          <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="用著作权人信息作为作者信息" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,3083" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[item(&quot;著作权人信息&quot;)]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="njl:JObject">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="njl:JObject" Name="SubItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="AuthorInfo" sap:VirtualizedContainerService.HintSize="526,2853" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence DisplayName="AuthorInfo" sap:VirtualizedContainerService.HintSize="526,2915" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="著作权人署名情况" />
                   </Sequence.Variables>
@@ -435,6 +434,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
+                  <Delay DisplayName="Delay 1s" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
@@ -449,20 +449,20 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="604,3113" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap:VirtualizedContainerService.HintSize="604,3175" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="使用作者信息" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,3021" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[item(&quot;作者信息&quot;)]">
+          <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="使用作者信息" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,3083" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[item(&quot;作者信息&quot;)]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="njl:JObject">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="njl:JObject" Name="SubItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="AuthorInfo" sap:VirtualizedContainerService.HintSize="526,2853" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="AuthorInfo" sap:VirtualizedContainerService.HintSize="526,2915" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="作者署名情况" />
                   </Sequence.Variables>
@@ -763,6 +763,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
+                  <Delay DisplayName="Delay 1s" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>

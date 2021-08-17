@@ -15,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.2.0",
-  "projectVersion": "1.1.0",
+  "projectVersion": "1.1.2",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -37,11 +37,7 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": [
-        "Data/Input/当前填报队列.xlsx",
-        "Data/Output/作品填报结果.xlsx",
-        "Data/Temp/任务执行结果列表.xlsx"
-      ]
+      "ignoredFiles": []
     },
     "fileInfoCollection": [],
     "modernBehavior": false

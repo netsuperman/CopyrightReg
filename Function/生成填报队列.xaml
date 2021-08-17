@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1226,2457</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1207,2862</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -86,9 +86,10 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="通过API接口获取填报任务队列，存储为Excel文件" DisplayName="Generate Task Queue" sap:VirtualizedContainerService.HintSize="604,2292" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="通过API接口获取填报任务队列，存储为Excel文件" DisplayName="Generate Task Queue" sap:VirtualizedContainerService.HintSize="604,2697" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="RequestTaskList" />
       <Variable x:TypeArguments="x:Int32" Name="RequestStatusCode" />
@@ -242,6 +243,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
+    <If Condition="[dtTaskQueue.Rows.Count &lt; 1]" sap:VirtualizedContainerService.HintSize="562,244" sap2010:WorkflowViewState.IdRef="If_6">
+      <If.Then>
+        <Throw Exception="[new SystemException(&quot;暂无准备填报条目&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+      </If.Then>
+    </If>
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="562,81" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[in_Config(&quot;InputFolder&quot;).ToString+&quot;\当前填报队列.xlsx&quot;]" />
     <ui:WriteRange AddHeaders="True" DataTable="[dtTaskQueue]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="562,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[in_Config(&quot;InputFolder&quot;).ToString+&quot;\当前填报队列.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

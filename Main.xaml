@@ -8,7 +8,7 @@
   <sap:VirtualizedContainerService.HintSize>1207,966</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="35">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -44,10 +44,13 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>LanguageChange</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,6 +85,8 @@
       <AssemblyReference>LanguageChange</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[作品登记机器人]&#xA;[2021.8.16]&#xA;[项目建议存放路径：C:\UiPathProjects\REF_CopyrightReg]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="749,801" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -204,7 +209,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
-        <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,796" sap2010:WorkflowViewState.IdRef="Transition_6">
+        <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,820" sap2010:WorkflowViewState.IdRef="Transition_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:PointCollection x:Key="ConnectorLocation">349.833333333333,328.333333333333 349.833333333333,440.666666666667</av:PointCollection>
@@ -345,7 +350,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <State.Transitions>
-                <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,520" sap2010:WorkflowViewState.IdRef="Transition_4">
+                <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="479,892" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:PointCollection x:Key="ConnectorLocation">303.633333333333,641.666666666667 303.633333333333,687.76 634.5,687.76 634.5,65.5166666666667 477,65.5166666666667</av:PointCollection>
@@ -354,9 +359,6 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Transition.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
-                  </Transition.Condition>
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,107" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
@@ -409,7 +411,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="需编辑in_ConfigFile参数，指向Config.xlsx的访问路径" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">C:\UiPathProjects\REF_CopyrightReg\Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -660,7 +662,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="510,1817" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,141" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
                                 <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="464,1671" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -788,8 +790,63 @@
                       </State.Transitions>
                     </State>
                   </Transition.To>
+                  <Transition.Action>
+                    <Sequence DisplayName="填报失败 更新RPA状态" sap:VirtualizedContainerService.HintSize="376,482" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="data_id" />
+                        <Variable x:TypeArguments="x:String" Name="FeedBackBody" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_31">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[data_id]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[TransactionItem("data_id").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Trace" Message="[TransactionItem(&quot;SN&quot;).ToString &amp; &quot;：RPA状态更新为填报失败&quot;]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_32">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[FeedBackBody]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Config("RPA状态更新").ToString.Replace("{RpaState}","填报失败").Replace("{data_id}",data_id).Replace("{RegNo}","")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="API更新当前作品RPA状态" Body="[FeedBackBody]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[Config(&quot;数据更新API&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" TimeoutMS="30000">
+                        <ui:HttpClient.Attachments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Attachments>
+                        <ui:HttpClient.Cookies>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Cookies>
+                        <ui:HttpClient.Headers>
+                          <InArgument x:TypeArguments="x:String" x:Key="Authorization">Bearer m7nH6auaTi2EpGErkMzfscsycWFtbgGU</InArgument>
+                        </ui:HttpClient.Headers>
+                        <ui:HttpClient.Parameters>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Parameters>
+                        <ui:HttpClient.UrlSegments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.UrlSegments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:HttpClient>
+                    </Sequence>
+                  </Transition.Action>
+                  <Transition.Condition>
+                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+                  </Transition.Condition>
                 </Transition>
-                <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="Transition_1">
+                <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="479,923" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:PointCollection x:Key="ConnectorLocation">361.383333333333,641.666666666667 361.383333333333,674.76 579.5,674.76 579.5,247.133333333333 475.333333333333,247.133333333333</av:PointCollection>
@@ -802,6 +859,58 @@
                   <Transition.To>
                     <x:Reference>__ReferenceID0</x:Reference>
                   </Transition.To>
+                  <Transition.Action>
+                    <Sequence DisplayName="填报失败 更新RPA状态" sap:VirtualizedContainerService.HintSize="376,482" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="data_id" />
+                        <Variable x:TypeArguments="x:String" Name="FeedBackBody" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_37">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[data_id]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[TransactionItem("data_id").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Trace" Message="[TransactionItem(&quot;SN&quot;).ToString &amp; &quot;：RPA状态更新为填报失败&quot;]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_38">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[FeedBackBody]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Config("RPA状态更新").ToString.Replace("{RpaState}","填报失败").Replace("{data_id}",data_id).Replace("{RegNo}","")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="API更新当前作品RPA状态" Body="[FeedBackBody]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[Config(&quot;数据更新API&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" TimeoutMS="30000">
+                        <ui:HttpClient.Attachments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Attachments>
+                        <ui:HttpClient.Cookies>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Cookies>
+                        <ui:HttpClient.Headers>
+                          <InArgument x:TypeArguments="x:String" x:Key="Authorization">Bearer m7nH6auaTi2EpGErkMzfscsycWFtbgGU</InArgument>
+                        </ui:HttpClient.Headers>
+                        <ui:HttpClient.Parameters>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Parameters>
+                        <ui:HttpClient.UrlSegments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.UrlSegments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:HttpClient>
+                    </Sequence>
+                  </Transition.Action>
                   <Transition.Condition>
                     <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="BusinessException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4" />
                   </Transition.Condition>
@@ -827,7 +936,7 @@
             </State>
           </Transition.To>
           <Transition.Action>
-            <ui:LogMessage DisplayName="Log message (New transaction retrieved)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[Config(&quot;LogMessage_GetTransactionData&quot;).ToString+TransactionNumber.ToString]" />
+            <ui:LogMessage DisplayName="Log message (New transaction retrieved)" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[Config(&quot;LogMessage_GetTransactionData&quot;).ToString+TransactionNumber.ToString]" />
           </Transition.Action>
           <Transition.Condition>
             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
@@ -847,7 +956,7 @@
             <x:Reference>__ReferenceID1</x:Reference>
           </Transition.To>
           <Transition.Action>
-            <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
+            <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
           </Transition.Action>
           <Transition.Condition>
             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem Is Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_6" />

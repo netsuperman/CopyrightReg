@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1226,12941</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1207,9580</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>文本2_著作权人信息_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -74,9 +74,10 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="著作权人信息" sap:VirtualizedContainerService.HintSize="832,12776" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="著作权人信息" sap:VirtualizedContainerService.HintSize="832,9415" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ApplyType" />
       <Variable x:TypeArguments="x:Int32" Name="Pidx" />
@@ -92,13 +93,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Category" sap:VirtualizedContainerService.HintSize="790,95" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;2/4 著作权人信息 START&quot;]" />
-    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each 追加著作权人" sap:VirtualizedContainerService.HintSize="790,7795" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[item(&quot;著作权人信息&quot;)]">
+    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each 追加著作权人" sap:VirtualizedContainerService.HintSize="790,4403" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[item(&quot;著作权人信息&quot;)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JObject" Name="SubItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="754,7658" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="610,4266" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="著作权人署名情况" />
               <Variable x:TypeArguments="x:String" Name="Province" />
@@ -111,7 +112,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="712,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="568,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -141,7 +142,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <Sequence DisplayName="追加著作权人数据准备" sap:VirtualizedContainerService.HintSize="712,925" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="追加著作权人数据准备" sap:VirtualizedContainerService.HintSize="568,925" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,7 +210,7 @@
                 </If.Then>
               </If>
             </Sequence>
-            <Sequence DisplayName="追加著作权人" sap:VirtualizedContainerService.HintSize="712,6255" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence DisplayName="追加著作权人" sap:VirtualizedContainerService.HintSize="568,2801" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="著作权人证件类型" />
               </Sequence.Variables>
@@ -219,7 +220,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="点+号" sap:VirtualizedContainerService.HintSize="670,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="点+号" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -241,7 +242,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="姓名或名称" sap:VirtualizedContainerService.HintSize="670,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[SubItem(&quot;著作权人姓名或名称&quot;).ToString]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="姓名或名称" sap:VirtualizedContainerService.HintSize="526,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[SubItem(&quot;著作权人姓名或名称&quot;).ToString]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fe7bd7e3-bc5a-4945-921f-458ec4049aec" InformativeScreenshot="6a86f2e9e8486effea66482a44406ee4" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='copyName' tag='INPUT' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -253,14 +254,14 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="670,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <Sequence DisplayName="地址选择" sap:VirtualizedContainerService.HintSize="670,3524" sap2010:WorkflowViewState.IdRef="Sequence_43">
+              <Delay DisplayName="Delay 2s" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="526,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <Sequence DisplayName="地址选择" sap:VirtualizedContainerService.HintSize="526,70" sap2010:WorkflowViewState.IdRef="Sequence_43">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="CityExists" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -498,7 +499,7 @@
                     </ui:Click.Target>
                   </ui:Click>
                 </Sequence>
-                <Sequence DisplayName="City District" sap:VirtualizedContainerService.HintSize="628,930" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                <Sequence DisplayName="City District" sap:VirtualizedContainerService.HintSize="628,1198" sap2010:WorkflowViewState.IdRef="Sequence_42">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -556,28 +557,81 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InterruptibleDoWhile>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click City District" sap:VirtualizedContainerService.HintSize="586,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cbdc5775-1709-457b-93a9-039dd3bf72e3" InformativeScreenshot="2258118a63072cb9b32a5aec74de6fd8" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='rcDialogTitle*' tag='DIV' /&gt;&lt;nav up='7' /&gt;&lt;webctrl isleaf='1' tag='LI' aaname='{{District}}' class='ant-cascader-menu-item' idx='{{Didx}}' /&gt;" TimeoutMS="5000">
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
+                  <TryCatch sap2010:Annotation.AnnotationText="省局地址选项地区字段无法匹配的处理（默认选第一个区）" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="586,374" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click City District" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cbdc5775-1709-457b-93a9-039dd3bf72e3" InformativeScreenshot="2258118a63072cb9b32a5aec74de6fd8" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='rcDialogTitle*' tag='DIV' /&gt;&lt;nav up='7' /&gt;&lt;webctrl isleaf='1' tag='LI' aaname='{{District}}' class='ant-cascader-menu-item' idx='{{Didx}}' /&gt;" TimeoutMS="5000">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,23" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,333" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;著作权人地区选择有误&quot;]" />
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click City District" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cbdc5775-1709-457b-93a9-039dd3bf72e3" InformativeScreenshot="2258118a63072cb9b32a5aec74de6fd8" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='rcDialogTitle*' tag='DIV' /&gt;&lt;nav up='7' /&gt;&lt;webctrl isleaf='1' tag='LI' class='ant-cascader-menu-item' idx='{{Didx}}' /&gt;" TimeoutMS="5000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                          </Sequence>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </Sequence>
-              <Sequence DisplayName="组织类别" sap:VirtualizedContainerService.HintSize="670,445" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="组织类别" sap:VirtualizedContainerService.HintSize="526,445" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="著作权人组织类别" />
                 </Sequence.Variables>
@@ -640,7 +694,7 @@
                   </ui:Click.Target>
                 </ui:Click>
               </Sequence>
-              <Sequence DisplayName="证件类别" sap:VirtualizedContainerService.HintSize="670,445" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence DisplayName="证件类别" sap:VirtualizedContainerService.HintSize="526,445" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -700,7 +754,7 @@
                   </ui:Click.Target>
                 </ui:Click>
               </Sequence>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="证件号码" EmptyField="True" sap:VirtualizedContainerService.HintSize="670,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[SubItem(&quot;著作权人证件号码&quot;).ToString]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="证件号码" EmptyField="True" sap:VirtualizedContainerService.HintSize="526,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[SubItem(&quot;著作权人证件号码&quot;).ToString]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1355d6a-b003-42d2-898a-59adfee7545b" InformativeScreenshot="787bb352a3da19ffb4a73426abf48755" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='copyIdCard' tag='INPUT' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -712,7 +766,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <Assign sap:VirtualizedContainerService.HintSize="670,61" sap2010:WorkflowViewState.IdRef="Assign_20">
+              <Assign sap:VirtualizedContainerService.HintSize="526,61" sap2010:WorkflowViewState.IdRef="Assign_20">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[著作权人署名情况]</OutArgument>
                 </Assign.To>
@@ -720,7 +774,7 @@
                   <InArgument x:TypeArguments="x:String">[SubItem("著作权人署名情况").ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Sequence DisplayName="署名情况" sap:VirtualizedContainerService.HintSize="670,972" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence DisplayName="署名情况" sap:VirtualizedContainerService.HintSize="526,972" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -805,7 +859,7 @@
                 </If>
               </Sequence>
             </Sequence>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 确定" sap:VirtualizedContainerService.HintSize="712,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 确定" sap:VirtualizedContainerService.HintSize="568,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -827,6 +881,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
+            <Delay DisplayName="Delay 1s" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="568,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
@@ -907,13 +962,13 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:Click>
     </Sequence>
-    <ui:ForEach x:TypeArguments="njl:JObject" sap2010:Annotation.AnnotationText="" CurrentIndex="[index]" DisplayName="For Each 著作权人联系方式" sap:VirtualizedContainerService.HintSize="790,2579" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[item(&quot;联系人信息&quot;)]">
+    <ui:ForEach x:TypeArguments="njl:JObject" sap2010:Annotation.AnnotationText="" CurrentIndex="[index]" DisplayName="For Each 著作权人联系方式" sap:VirtualizedContainerService.HintSize="790,2610" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[item(&quot;联系人信息&quot;)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JObject" Name="SubItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="著作权人联系方式" sap:VirtualizedContainerService.HintSize="568,2411" sap2010:WorkflowViewState.IdRef="Sequence_30">
+          <Sequence DisplayName="著作权人联系方式" sap:VirtualizedContainerService.HintSize="568,2442" sap2010:WorkflowViewState.IdRef="Sequence_30">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -952,7 +1007,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <Sequence DisplayName="Contact " sap:VirtualizedContainerService.HintSize="526,1910" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <Sequence DisplayName="Contact " sap:VirtualizedContainerService.HintSize="526,1941" sap2010:WorkflowViewState.IdRef="Sequence_29">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="CopyrightProvince" />
                 <Variable x:TypeArguments="x:String" Name="CopyrightCity" />
@@ -1031,14 +1086,14 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <Sequence DisplayName="Select Location" sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence DisplayName="著作权人（联系人）地址选择" sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Sequence_28">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="764,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -1060,7 +1115,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
                   <ui:AnchorBase.Action>
                     <ActivityAction x:TypeArguments="ui:Anchor">
                       <ActivityAction.Argument>
@@ -1105,7 +1160,7 @@
                     </ui:WaitUiElementAppear>
                   </ui:AnchorBase.AnchorProvider>
                 </ui:AnchorBase>
-                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
                   <ui:AnchorBase.Action>
                     <ActivityAction x:TypeArguments="ui:Anchor">
                       <ActivityAction.Argument>
@@ -1150,7 +1205,7 @@
                     </ui:WaitUiElementAppear>
                   </ui:AnchorBase.AnchorProvider>
                 </ui:AnchorBase>
-                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
                   <ui:AnchorBase.Action>
                     <ActivityAction x:TypeArguments="ui:Anchor">
                       <ActivityAction.Argument>
@@ -1195,51 +1250,127 @@
                     </ui:WaitUiElementAppear>
                   </ui:AnchorBase.AnchorProvider>
                 </ui:AnchorBase>
-                <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
-                  <ui:AnchorBase.Action>
-                    <ActivityAction x:TypeArguments="ui:Anchor">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
-                      </ActivityAction.Argument>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='{{CopyrightDistrict}}' tag='LI' /&gt;">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:Click.Target>
-                      </ui:Click>
-                    </ActivityAction>
-                  </ui:AnchorBase.Action>
-                  <ui:AnchorBase.AnchorProvider>
-                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_copyrightAddressSelect'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10">
-                      <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="35623f38ad56bff449f80026c0ef1a3b" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_copyrightAddressSelect' tag='INPUT' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:WaitUiElementAppear.Target>
-                    </ui:WaitUiElementAppear>
-                  </ui:AnchorBase.AnchorProvider>
-                </ui:AnchorBase>
+                <TryCatch sap2010:Annotation.AnnotationText="省局地址选项地区字段无法匹配的处理（默认选第一个区）" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764,466" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch.Try>
+                    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
+                      <ui:AnchorBase.Action>
+                        <ActivityAction x:TypeArguments="ui:Anchor">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                          </ActivityAction.Argument>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='{{CopyrightDistrict}}' tag='LI' /&gt;" TimeoutMS="5000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </ActivityAction>
+                      </ui:AnchorBase.Action>
+                      <ui:AnchorBase.AnchorProvider>
+                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_copyrightAddressSelect'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_13">
+                          <ui:WaitUiElementAppear.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="35623f38ad56bff449f80026c0ef1a3b" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_copyrightAddressSelect' tag='INPUT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:WaitUiElementAppear.Target>
+                        </ui:WaitUiElementAppear>
+                      </ui:AnchorBase.AnchorProvider>
+                    </ui:AnchorBase>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="730,23" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="ui:ActivityTimeoutException">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:ActivityTimeoutException" Name="exception" />
+                        </ActivityAction.Argument>
+                        <Sequence sap:VirtualizedContainerService.HintSize="768,425" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,95" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;著作权人（联系人）地址选择有误&quot;]" />
+                          <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_12">
+                            <ui:AnchorBase.Action>
+                              <ActivityAction x:TypeArguments="ui:Anchor">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                </ActivityAction.Argument>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='*区' tag='LI' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                              </ActivityAction>
+                            </ui:AnchorBase.Action>
+                            <ui:AnchorBase.AnchorProvider>
+                              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_copyrightAddressSelect'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_14">
+                                <ui:WaitUiElementAppear.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="35623f38ad56bff449f80026c0ef1a3b" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_copyrightAddressSelect' tag='INPUT' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:WaitUiElementAppear.Target>
+                              </ui:WaitUiElementAppear>
+                            </ui:AnchorBase.AnchorProvider>
+                          </ui:AnchorBase>
+                        </Sequence>
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
               </Sequence>
               <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into ContractAddress" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="True" Text="[SubItem(&quot;联系人地址&quot;)(&quot;province&quot;).toString &amp; SubItem(&quot;联系人地址&quot;)(&quot;city&quot;).toString &amp;SubItem(&quot;联系人地址&quot;)(&quot;district&quot;).toString &amp; SubItem(&quot;联系人地址&quot;)(&quot;detail&quot;).toString]">
                 <ui:TypeInto.Target>
@@ -1274,7 +1405,12 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[PostCodeError]" sap:VirtualizedContainerService.HintSize="484,318" sap2010:WorkflowViewState.IdRef="If_13">
+              <If sap2010:Annotation.AnnotationText="如果邮编省局系统不接受，则直接替换为100000" Condition="[PostCodeError]" sap:VirtualizedContainerService.HintSize="484,349" sap2010:WorkflowViewState.IdRef="If_13">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
                   <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into ContactPostcode" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="False" SimulateType="True" Text="100000">
                     <ui:TypeInto.Target>

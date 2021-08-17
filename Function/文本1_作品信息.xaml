@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1226,6710</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1207,7065</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WorkInfo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -78,10 +78,9 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WorkInfo" sap:VirtualizedContainerService.HintSize="930,6545" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WorkInfo" sap:VirtualizedContainerService.HintSize="1012,6900" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FilePath" />
       <Variable x:TypeArguments="x:String" Name="创作说明" />
@@ -109,8 +108,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="888,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;1/4 作品信息 START&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="检测和处理数据以符合填报规则" DisplayName="准备数据" sap:VirtualizedContainerService.HintSize="888,1444" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="970,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;1/4 作品信息 START&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="检测和处理数据以符合填报规则" DisplayName="准备数据" sap:VirtualizedContainerService.HintSize="970,1444" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -287,7 +286,7 @@
         </If.Then>
       </If>
     </Sequence>
-    <Sequence DisplayName="开始填写" sap:VirtualizedContainerService.HintSize="888,4699" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence DisplayName="开始填写" sap:VirtualizedContainerService.HintSize="970,5054" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="WorkCategory" />
         <Variable x:TypeArguments="x:String" Name="WorkTitle" />
@@ -300,7 +299,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into Work Name" EmptyField="True" sap:VirtualizedContainerService.HintSize="846,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[作品名称]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into Work Name" EmptyField="True" sap:VirtualizedContainerService.HintSize="928,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[作品名称]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e71b7bb-9fe6-4773-9fcb-d88ced79835c" InformativeScreenshot="cadc6641f870f38663ab3e469cd131f5" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl tag='INPUT' aaname='作品名称' /&gt;">
             <ui:Target.TimeoutMS>
@@ -318,7 +317,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:TypeInto>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 作品类别" sap:VirtualizedContainerService.HintSize="846,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 作品类别" sap:VirtualizedContainerService.HintSize="928,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -340,7 +339,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <If Condition="[作品类别.ToString.Contains(&quot;其他&quot;)]" DisplayName="If Category Contains 其他" sap:VirtualizedContainerService.HintSize="846,297" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[作品类别.ToString.Contains(&quot;其他&quot;)]" DisplayName="If Category Contains 其他" sap:VirtualizedContainerService.HintSize="928,297" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
           <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 作品说明" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" SimulateType="True" Text="[作品说明]">
             <ui:TypeInto.Target>
@@ -382,7 +381,7 @@
           </ui:TypeInto>
         </If.Else>
       </If>
-      <Sequence DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="846,344" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="928,344" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -434,7 +433,7 @@
           </ui:Click.Target>
         </ui:Click>
       </Sequence>
-      <Sequence DisplayName="Create 作品完成日期" sap:VirtualizedContainerService.HintSize="846,372" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence DisplayName="Create 作品完成日期" sap:VirtualizedContainerService.HintSize="928,372" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -476,14 +475,14 @@
           </ui:TypeInto.Target>
         </ui:TypeInto>
       </Sequence>
-      <Sequence DisplayName="Completion Location" sap:VirtualizedContainerService.HintSize="846,782" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence DisplayName="Completion Location" sap:VirtualizedContainerService.HintSize="928,869" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -505,7 +504,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -527,7 +526,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -549,7 +548,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -571,30 +570,73 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0525b75b-19a5-4982-be62-c70fbbf020ac" InformativeScreenshot="c068fbdffc856912d6005a8d88f9068c" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl isleaf='1' tag='LI' aaname='{{District}}' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch.Try>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0525b75b-19a5-4982-be62-c70fbbf020ac" InformativeScreenshot="c068fbdffc856912d6005a8d88f9068c" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl isleaf='1' tag='LI' aaname='{{District}}' /&gt;" TimeoutMS="5000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="400,23" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,333" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;作品完成地点地区选择有误&quot;]" />
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="500" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0525b75b-19a5-4982-be62-c70fbbf020ac" InformativeScreenshot="c068fbdffc856912d6005a8d88f9068c" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&#xA;&lt;webctrl isleaf='1' tag='LI' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' idx='2' /&gt;&#xA;" TimeoutMS="5000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
       </Sequence>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 详细地址" EmptyField="True" sap:VirtualizedContainerService.HintSize="846,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="True" Text="[Detail]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 详细地址" EmptyField="True" sap:VirtualizedContainerService.HintSize="928,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="True" Text="[Detail]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfc7a4e6-c824-434f-9022-8b07e0836767" InformativeScreenshot="3690c107f62aac55a86d9be6f2800c27" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_completeArea' tag='INPUT' /&gt;">
             <ui:Target.TimeoutMS>
@@ -612,7 +654,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:TypeInto>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 作品发表状态" sap:VirtualizedContainerService.HintSize="846,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 作品发表状态" sap:VirtualizedContainerService.HintSize="928,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -634,7 +676,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <If Condition="[item(&quot;作品发表状态&quot;).ToString = &quot;已发表&quot;]" DisplayName="If 作品发表状态 Equals 已发表" sap:VirtualizedContainerService.HintSize="846,2012" sap2010:WorkflowViewState.IdRef="If_2">
+      <If Condition="[item(&quot;作品发表状态&quot;).ToString = &quot;已发表&quot;]" DisplayName="If 作品发表状态 Equals 已发表" sap:VirtualizedContainerService.HintSize="928,2280" sap2010:WorkflowViewState.IdRef="If_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -642,13 +684,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="已发表" sap:VirtualizedContainerService.HintSize="810,1828" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="已发表" sap:VirtualizedContainerService.HintSize="848,2096" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Create Complete Time " sap:VirtualizedContainerService.HintSize="768,372" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Create Complete Time " sap:VirtualizedContainerService.HintSize="806,372" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -690,14 +732,14 @@
                 </ui:TypeInto.Target>
               </ui:TypeInto>
             </Sequence>
-            <Sequence DisplayName="First Completion Location" sap:VirtualizedContainerService.HintSize="768,1150" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="First Completion Location" sap:VirtualizedContainerService.HintSize="806,1418" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  FORM_9_finishArea'" sap:VirtualizedContainerService.HintSize="764,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -719,7 +761,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                 <ui:AnchorBase.Action>
                   <ActivityAction x:TypeArguments="ui:Anchor">
                     <ActivityAction.Argument>
@@ -764,7 +806,7 @@
                   </ui:WaitUiElementAppear>
                 </ui:AnchorBase.AnchorProvider>
               </ui:AnchorBase>
-              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                 <ui:AnchorBase.Action>
                   <ActivityAction x:TypeArguments="ui:Anchor">
                     <ActivityAction.Argument>
@@ -809,7 +851,7 @@
                   </ui:WaitUiElementAppear>
                 </ui:AnchorBase.AnchorProvider>
               </ui:AnchorBase>
-              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="764,198" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
                 <ui:AnchorBase.Action>
                   <ActivityAction x:TypeArguments="ui:Anchor">
                     <ActivityAction.Argument>
@@ -854,53 +896,129 @@
                   </ui:WaitUiElementAppear>
                 </ui:AnchorBase.AnchorProvider>
               </ui:AnchorBase>
-              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
-                <ui:AnchorBase.Action>
-                  <ActivityAction x:TypeArguments="ui:Anchor">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
-                    </ActivityAction.Argument>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='{{FirstDistrict}}' tag='LI' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                  </ActivityAction>
-                </ui:AnchorBase.Action>
-                <ui:AnchorBase.AnchorProvider>
-                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_firstArea'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
-                    <ui:WaitUiElementAppear.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="dfbb366f4dce0278e5363e575120b345" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_firstArea' tag='INPUT' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:WaitUiElementAppear.Target>
-                  </ui:WaitUiElementAppear>
-                </ui:AnchorBase.AnchorProvider>
-              </ui:AnchorBase>
+              <TryCatch sap2010:Annotation.AnnotationText="省局地址选项地区字段无法匹配的处理（默认选第一个区）" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764,466" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
+                    <ui:AnchorBase.Action>
+                      <ActivityAction x:TypeArguments="ui:Anchor">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                        </ActivityAction.Argument>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='{{FirstDistrict}}' tag='LI' /&gt;" TimeoutMS="5000">
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </ActivityAction>
+                    </ui:AnchorBase.Action>
+                    <ui:AnchorBase.AnchorProvider>
+                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_firstArea'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+                        <ui:WaitUiElementAppear.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="dfbb366f4dce0278e5363e575120b345" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_firstArea' tag='INPUT' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:WaitUiElementAppear.Target>
+                      </ui:WaitUiElementAppear>
+                    </ui:AnchorBase.AnchorProvider>
+                  </ui:AnchorBase>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="730,23" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="ui:ActivityTimeoutException">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ui:ActivityTimeoutException" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence sap:VirtualizedContainerService.HintSize="768,425" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,95" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;作品发表地点地区选择有误&quot;]" />
+                        <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+                          <ui:AnchorBase.Action>
+                            <ActivityAction x:TypeArguments="ui:Anchor">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                              </ActivityAction.Argument>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c15d28a-28ab-41e8-a39d-e3a7dddd2aef" InformativeScreenshot="ac663ac0eb04211c1df31df44c232884" Selector="&lt;webctrl aaname='*区' tag='LI' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </ActivityAction>
+                          </ui:AnchorBase.Action>
+                          <ui:AnchorBase.AnchorProvider>
+                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  FORM_6_firstArea'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+                              <ui:WaitUiElementAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b1701c8-6fd0-482f-95ed-c8c315c75229" InformativeScreenshot="dfbb366f4dce0278e5363e575120b345" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_firstArea' tag='INPUT' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:WaitUiElementAppear.Target>
+                            </ui:WaitUiElementAppear>
+                          </ui:AnchorBase.AnchorProvider>
+                        </ui:AnchorBase>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
             </Sequence>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  FORM_5_completeA...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="768,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" SimulateType="True" Text="[FirstDetail]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  FORM_5_completeA...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="806,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" SimulateType="True" Text="[FirstDetail]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfc7a4e6-c824-434f-9022-8b07e0836767" InformativeScreenshot="1d4e1918585184837245c2b68e225817" Selector="&lt;html app='chrome.exe' title='福建省作品自愿登记系统' /&gt;&lt;webctrl id='FORM_*_workPublishArea' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -922,6 +1040,6 @@
         </If.Then>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="888,95" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;1/4 作品信息 END&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="970,95" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;1/4 作品信息 END&quot;]" />
   </Sequence>
 </Activity>
